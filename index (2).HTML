@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תוצאות חיפוש מגבת 599</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .product {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product h2 {
+            font-size: 1.5em;
+            margin: 0 0 10px 0;
+        }
+        .product p {
+            margin: 5px 0;
+        }
+        .product .price {
+            color: #e44d2e;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .product .bidders {
+            color: #555;
+        }
+        .product .end-date {
+            color: #555;
+        }
+        .dropdown {
+            margin: 20px 0;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 1em;
+        }
+    </style>
+    <script>
+        function showProduct(selectedValue) {
+            const products = document.getElementsByClassName('product');
+            for (let product of products) {
+                product.style.display = 'none';
+            }
+            document.getElementById(selectedValue).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>תוצאות חיפוש מגבת 599</h1>
+
+        <div class="dropdown">
+            <select onchange="showProduct(this.value)">
+                <option value="">בחר מוצר</option>
+                <option value="product1">מגבת מיקרו פיבר בצבעים שונים</option>
+                <option value="product2">EasyWipe מגבת רטובה לניקוי מסכים ומשטחים רגישים</option>
+                <option value="product3">מגבת מיקרו פיבר לבנה</option>
+            </select>
+        </div>
+
+        <div class="product" id="product1">
+            <img src="path_to_image1.jpg" alt="מגבת מיקרו פיבר בצבעים שונים">
+            <h2>מגבת מיקרו פיבר בצבעים שונים</h2>
+            <p class="price">מחיר התחלתי: 12 ₪</p>
+            <p class="bidders">מצביעים: 380</p>
+            <p class="end-date">תאריך סיום: 1 בדצמבר 2024</p>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="path_to_image2.jpg" alt="EasyWipe מגבת רטובה לניקוי מסכים ומשטחים רגישים">
+            <h2>EasyWipe מגבת רטובה לניקוי מסכים ומשטחים רגישים</h2>
+            <p class="price">מחיר התחלתי: 15 ₪</p>
+            <p class="bidders">מצביעים: 132</p>
+            <p class="end-date">תאריך סיום: 1 בדצמבר 2024</p>
+        </div>
+
+        <div class="product" id="product3">
+            <img src="path_to_image3.jpg" alt="מגבת מיקרו פיבר לבנה">
+            <h2>מגבת מיקרו פיבר לבנה</h2>
+            <p class="price">מחיר התחלתי: 15 ₪</p>
+            <p class="bidders">מצביעים: 159</p>
+            <p class="end-date">תאריך סיום: 1 בדצמבר 2024</p>
+        </div>
+    </div>
+</body>
+</html>
